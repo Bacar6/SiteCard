@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Pour espacer les cartes */
+  padding: 20px;
+}
+
+.card {
+  width: calc(25% - 20px); /* 25% pour afficher quatre cartes par ligne, ajustez la marge en conséquence */
+  margin: 0 0 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #2DB6EC;
+}
+
+.card h3, .card p {
+  padding: 10px;
+  margin: 0;
+}
+
+/* Styles pour les écrans de petite taille (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .card {
+      width: calc(50% - 20px); /* 50% pour deux cartes par ligne sur les petits écrans */
+  }
+}
+
+
